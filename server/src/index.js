@@ -121,7 +121,7 @@ function requireTelegram(req, res, next) {
   req.telegramUser = user;
   next();
 }
-
+app.use("/api/interactions", interactionRoutes(supabase, requireTelegram));
 // ===============================
 // SUPER ADMIN MIDDLEWARE
 // ===============================
